@@ -15,7 +15,7 @@
 @media screen and (min-width: 768px) {
     .body {
         grid-template-columns: 25% 75%;
-        column-gap: 2rem;
+        column-gap: 1rem;
     }
 }
 
@@ -31,7 +31,7 @@
     display: flex;
     align-items: flex-end;
     height: 4rem;
-    witdh: 100%
+    width: 100%
 }
 
 @media screen and (min-width: 768px) {
@@ -65,8 +65,11 @@
     }
 }
 
-.button {}
 
+
+.nav{
+    display:none
+}
 .nav-list {
     display: block;
     align-items: center;
@@ -85,6 +88,13 @@
 .card {
     margin-bottom: 1rem;
     overflow: hidden;
+    
+}
+.card-content.active{
+    height:100%;
+}
+.card-header{
+    text-align: center;
 }
 
 .card-ttl {
@@ -92,22 +102,31 @@
     background-color: var(--secondary-color);
     border-radius: 1rem;
     padding: 1rem 3rem;
+    margin-top: 0;
 }
 
 .card-content {
     background-color: var(--secondary-color);
-    margin: 0% 5%;
+    
+    margin: 0% 0%;
     padding: 1rem;
     border-radius: 1rem;
 }
 
 .card-item {
     width: calc(100% - 2rem);
-    background-color: rgb(133, 173, 248);
+    
     line-height: 1rem;
     padding: 1rem;
     border-radius: 1rem;
+    margin-bottom:1rem ;
 }
+.card-item.exp{
+    background-color: rgb(133, 173, 248);
+}
+.card-item.dgr{
+    background-color: rgb(162, 246, 202);
+    }
 
 .date {
     font-size: 1rem;
