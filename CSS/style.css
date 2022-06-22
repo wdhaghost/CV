@@ -84,6 +84,11 @@
         display:block;
     }
 }
+
+.about-me.active{
+    display:block;
+}
+
 .nav{
     display:none
 }
