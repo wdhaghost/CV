@@ -1,54 +1,139 @@
-:root{
-/* size */
-font-size: 16px;
---primary-color:#898989 ;
---secondary-color: #F5F5F5;
---bg-color: #FFF;
+:root {
+    /* size */
+    font-size: 16px;
+    --primary-color: #898989;
+    --secondary-color: #F5F5F5;
+    --bg-color: #FFF;
 }
-.body{
+
+.body {
     background-color: #898989;
     display: grid;
-    
+    padding: 1rem;
 }
+
 @media screen and (min-width: 768px) {
-    .body{
+    .body {
         grid-template-columns: 25% 75%;
         column-gap: 2rem;
     }
 }
+
 /* header */
-.header{
+.header {
     background-color: whitesmoke;
     padding: 1rem 3rem;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
-.identity{
-display: flex;
-align-items: flex-end;
-height: 4rem;
-
+.identity {
+    display: flex;
+    align-items: flex-end;
+    height: 4rem;
+    witdh: 100%
 }
+
 @media screen and (min-width: 768px) {
-    .identity{
+    .identity {
         flex-direction: column;
         align-items: flex-start;
+        height: auto;
     }
 }
-.profile-pic{
+
+.profile-pic {
     height: 4rem;
     width: auto;
     border-radius: 50%;
 }
-.name{
+
+@media screen and (min-width: 768px) {
+    .profile-pic {
+        height: 9rem;
+    }
+}
+
+.name {
     font-size: 1rem;
     color: black;
 }
 
-.about-me{
-    display:none;
+@media screen and (min-width: 768px) {
+    .name {
+        font-size: 2rem;
+    }
 }
 
-.button{
-    
+.button {}
+
+.nav-list {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav-link {}
+
+.nav-item {}
+
+.resume {
+    margin-bottom: 1rem;
+}
+
+.card {
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.card-ttl {
+    font-size: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+}
+
+.card-content {
+    background-color: var(--secondary-color);
+    margin: 0% 5%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.card-item {
+    width: calc(100% - 2rem);
+    background-color: rgb(133, 173, 248);
+    line-height: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.date {
+    font-size: 1rem;
+}
+
+.post {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.company {
+    font-size: 1.5rem;
+
+}
+
+.description {
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+.list-skill {
+    list-style: none;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
 }
