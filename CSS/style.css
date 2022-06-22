@@ -28,7 +28,7 @@
     padding: 1rem 3rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-   
+    position: relative;
 }
 @media screen and (min-width: 768px) {
     .header{
@@ -37,7 +37,11 @@
     }
 }
 
-
+.info-btn{
+    position: absolute;
+    right: 3%;
+    top:2rem;
+}
 .identity {
     display: flex;
     align-items: flex-end;
@@ -85,8 +89,18 @@
     }
 }
 
+
+
 .about-me.active{
     display:block;
+}
+.info-list{
+    list-style-type: none;
+     font-size: 0.9rem;
+}
+.info-item{
+    margin-bottom: 1rem;
+   
 }
 
 .nav{
@@ -201,9 +215,21 @@
 
 .list-skill {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    
 }
 
-.skills {
+.card-item.skills {
+    
+    background-color: rgb(248, 151, 151);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: 100%;
+}
+.skill{
+    display: inline-block;
+    
+    flex-grow: 1;
+    font-size: 2rem;
 }
