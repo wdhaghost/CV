@@ -1,3 +1,4 @@
+@import url(font-awesome.min.css);
 :root {
     /* size */
     font-size: 16px;
@@ -9,13 +10,15 @@
 .body {
     background-color: #898989;
     display: grid;
-    padding: 1rem;
+    font-family: Helvetica,Arial,  sans-serif;
 }
 
 @media screen and (min-width: 768px) {
     .body {
         grid-template-columns: 25% 75%;
         column-gap: 1rem;
+        padding: 1rem;
+        height:100vh;
     }
 }
 
@@ -25,7 +28,15 @@
     padding: 1rem 3rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
+   
 }
+@media screen and (min-width: 768px) {
+    .header{
+        height:45rem;
+        margin-bottom: 0;
+    }
+}
+
 
 .identity {
     display: flex;
@@ -65,38 +76,63 @@
     }
 }
 
-
-
+.about-me{
+    display:none;
+}
+@media screen and (min-width: 768px) {
+    .about-me{
+        display:block;
+    }
+}
 .nav{
     display:none
 }
+@media screen and (min-width: 768px) {
+    .nav {
+        display: block;
+    }
+}
 .nav-list {
-    display: block;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    justify-content:start;
+    display:flex;
+    list-style-type: none;
+    gap: 1rem;
 }
 
-.nav-link {}
-
-.nav-item {}
-
-.resume {
-    margin-bottom: 1rem;
+.nav-link {
 }
+
+.nav-item {
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    margin-top: 0;
+    width: 100%;
+}
+
+
 
 .card {
     margin-bottom: 1rem;
     overflow: hidden;
     
 }
-.card-content.active{
-    height:100%;
+@media screen and (min-width: 768px) {
+    .card {
+        margin-bottom: 0;
+    } 
 }
 .card-header{
     text-align: center;
-}
 
+}
+@media screen and (min-width: 768px) {
+    .card-header {
+        display: none;
+    }
+}
 .card-ttl {
     font-size: 2rem;
     background-color: var(--secondary-color);
@@ -107,15 +143,25 @@
 
 .card-content {
     background-color: var(--secondary-color);
-    
     margin: 0% 0%;
     padding: 1rem;
     border-radius: 1rem;
+    display:none;
+    height: 20rem;
+    overflow: scroll;
+}
+@media screen and (min-width: 768px) {
+    .card-content {
+        height:40rem;
+    }
+}
+
+.card-content.active{
+    display:block;
 }
 
 .card-item {
     width: calc(100% - 2rem);
-    
     line-height: 1rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -135,7 +181,7 @@
 .post {
     font-size: 1.5rem;
     font-weight: bold;
-
+    line-height: 1.5rem;
 }
 
 .company {
